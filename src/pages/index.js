@@ -15,22 +15,22 @@ const homePage = () => {
       </div>
       <div>
         <ol className={homeStyles.titles}>
-          <Link className={homeStyles.title}>
+          <Link to="philosophy" className={homeStyles.title}>
             <li className={homeStyles.list}>
               <h2>PHILOSOPHY</h2>
             </li>
           </Link>
-          <Link className={homeStyles.title}>
+          <Link to="technology" className={homeStyles.title}>
             <li className={homeStyles.list}>
               <h2>TECHNOLOGY</h2>
             </li>
           </Link>
-          <Link className={homeStyles.title}>
+          <Link to="literature" className={homeStyles.title}>
             <li className={homeStyles.list}>
               <h2>LITERATURE</h2>
             </li>
           </Link>
-          <Link className={homeStyles.title}>
+          <Link to="fiction" className={homeStyles.title}>
             <li className={homeStyles.list}>
               <h2>FICTION</h2>
             </li>

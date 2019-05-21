@@ -8,13 +8,16 @@ import Header from "../components/header"
 const Philosophy = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { genre: { eq: "Philosophy" } } }
+      ) {
         edges {
           node {
             frontmatter {
               title
               author
               date
+              genre
             }
           }
         }

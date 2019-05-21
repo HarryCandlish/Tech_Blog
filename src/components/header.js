@@ -12,16 +12,16 @@ const Header = () => {
             <img alt="nav" className={headerStyles.image} src="./nav.png" />
             <ul>
               <li>
-                <Link to="/#">PHILOPHY </Link>
+                <Link to="/philosophy">PHILOSOPHY </Link>
               </li>
               <li>
-                <Link to="/#">TECHNOLOGY</Link>
+                <Link to="/technology">TECHNOLOGY</Link>
               </li>
               <li>
-                <Link to="/#">FICTION </Link>
+                <Link to="/fiction">FICTION </Link>
               </li>
               <li>
-                <Link to="/#">LITERATURE </Link>
+                <Link to="/literature">LITERATURE </Link>
               </li>
             </ul>
           </li>

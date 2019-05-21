@@ -1,0 +1,63 @@
+.nav {
+  display: grid;
+  grid-template-columns: (1, 1fr);
+  grid-auto-rows: auto;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  border: 0.5px solid black;
+
+  ul {
+    background: white;
+    margin: 0;
+    padding-left: 0;
+    text-decoration: none;
+  }
+
+  li {
+    color: black;
+    background-color: white;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    transition-duration: 0.5s;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  li:hover {
+    cursor: pointer;
+    background-color: #f76c6c;
+  }
+
+  ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+  }
+
+  ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  li a {
+    color: black;
+  }
+}
+
+.image {
+  height: 30px;
+  width: 35px;
+  margin: 0;
+  padding: 0;
+}

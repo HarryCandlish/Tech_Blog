@@ -3,10 +3,12 @@ import React from "react"
 import { Link } from "gatsby"
 
 import homeStyles from "./index.module.scss"
+import Header from "../components/header"
 
 const homePage = () => {
   return (
     <div>
+      <Header />
       <div className={homeStyles.container}>
         <h2 className={homeStyles.mainTitle}>BLOG</h2>
         <h3 className={homeStyles.secondaryTitle}>HARRY CANDLISH</h3>
@@ -21,6 +23,16 @@ const homePage = () => {
           <Link className={homeStyles.title}>
             <li className={homeStyles.list}>
               <h2>TECHNOLOGY</h2>
+            </li>
+          </Link>
+          <Link className={homeStyles.title}>
+            <li className={homeStyles.list}>
+              <h2>LITERATURE</h2>
+            </li>
+          </Link>
+          <Link className={homeStyles.title}>
+            <li className={homeStyles.list}>
+              <h2>FICTION</h2>
             </li>
           </Link>
         </ol>

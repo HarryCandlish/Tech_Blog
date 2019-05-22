@@ -35,21 +35,19 @@ const Literature = () => {
   return (
     <div className={litStyles.body}>
       <Header />
-      <h1 className={litStyles.title}>Literature</h1>
+      <h1 className={litStyles.title}>LITERATURE</h1>
       <div>
         <ul className={litStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
               <li className={litStyles.post}>
                 <Link className={litStyles.link}>
-                  <p>{edge.node.frontmatter.title}</p>
+                  <h1 className={litStyles.titles}>
+                    {edge.node.frontmatter.title}
+                  </h1>
                   <p>{edge.node.frontmatter.author}</p>
                   <p>{edge.node.frontmatter.date}</p>
-                  <img
-                    alt="clown"
-                    className={litStyles.image}
-                    src={edge.node.frontmatter.image.childImageSharp.resize.src}
-                  />
+
                   <p>{edge.node.frontmatter.description}</p>
                 </Link>
               </li>

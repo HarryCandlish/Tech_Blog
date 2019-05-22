@@ -40,7 +40,7 @@ const Technology = () => {
         <ol className={techStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
-              <li>
+              <li className={techStyles.post}>
                 <Link className={techStyles.link}>
                   <p>{edge.node.frontmatter.title}</p>
                   <p>{edge.node.frontmatter.author}</p>

@@ -1,6 +1,19 @@
 .title {
   text-align: center;
   font-size: 40px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #f76c6c;
+  letter-spacing: px;
+}
+
+.titles {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #f76c6c;
+  letter-spacing: 1px;
 }
 
 .posts {
@@ -15,24 +28,23 @@
 
 .post {
   align-items: center;
-  max-width: 40%;
+  max-width: 22%;
   text-align: center;
   width: 100%;
   height: 100%;
   padding: 0.5rem;
-  margin: 1rem;
-  box-shadow: 0.3px 0.3px 1px 0.3px;
-  flex-basis: 200px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  //   width: 100%;
   justify-content: center space-between;
   border: 1px white solid;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-decoration: none;
   color: white;
   text-align: center;
@@ -40,5 +52,9 @@
 
 .link:hover {
   border: 1px solid #f76c6c;
-  color: #f76c6c;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
 }

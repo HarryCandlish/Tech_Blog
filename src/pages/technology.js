@@ -1,6 +1,6 @@
 import React from "react"
 
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import techStyles from "./technology.module.scss"
 import Header from "../components/header"
@@ -18,6 +18,14 @@ const Technology = () => {
               author
               date
               genre
+              description
+              image {
+                childImageSharp {
+                  resize(width: 250, height: 250) {
+                    src
+                  }
+                }
+              }
             }
           }
         }
@@ -33,9 +41,17 @@ const Technology = () => {
           {data.allMarkdownRemark.edges.map(edge => {
             return (
               <li>
-                <p>{edge.node.frontmatter.title}</p>
-                <p>{edge.node.frontmatter.author}</p>
-                <p>{edge.node.frontmatter.date}</p>
+                <Link className={techStyles.link}>
+                  <p>{edge.node.frontmatter.title}</p>
+                  <p>{edge.node.frontmatter.author}</p>
+                  <p>{edge.node.frontmatter.date}</p>
+                  <img
+                    alt="technology"
+                    className={techStyles.image}
+                    src={edge.node.frontmatter.image.childImageSharp.resize.src}
+                  />
+                  <p>{edge.node.frontmatter.description}</p>
+                </Link>
               </li>
             )
           })}

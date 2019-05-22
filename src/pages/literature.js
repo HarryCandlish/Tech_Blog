@@ -1,6 +1,6 @@
 import React from "react"
 
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import litStyles from "./literature.module.scss"
 import Header from "../components/header"
@@ -18,6 +18,14 @@ const Literature = () => {
               author
               date
               genre
+              description
+              image {
+                childImageSharp {
+                  resize(width: 250, height: 250) {
+                    src
+                  }
+                }
+              }
             }
           }
         }
@@ -29,17 +37,25 @@ const Literature = () => {
       <Header />
       <h1 className={litStyles.title}>Literature</h1>
       <div>
-        <ol className={litStyles.posts}>
+        <ul className={litStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
-              <li>
-                <p>{edge.node.frontmatter.title}</p>
-                <p>{edge.node.frontmatter.author}</p>
-                <p>{edge.node.frontmatter.date}</p>
+              <li className={litStyles.post}>
+                <Link className={litStyles.link}>
+                  <p>{edge.node.frontmatter.title}</p>
+                  <p>{edge.node.frontmatter.author}</p>
+                  <p>{edge.node.frontmatter.date}</p>
+                  <img
+                    alt="clown"
+                    className={litStyles.image}
+                    src={edge.node.frontmatter.image.childImageSharp.resize.src}
+                  />
+                  <p>{edge.node.frontmatter.description}</p>
+                </Link>
               </li>
             )
           })}
-        </ol>
+        </ul>
       </div>
     </div>
   )

@@ -35,21 +35,20 @@ const Philosophy = () => {
   return (
     <div className={philosophyStyles.body}>
       <Header />
-      <h1 className={philosophyStyles.title}>Philosophy</h1>
+      <h1 className={philosophyStyles.title}>PHILOSOPHY</h1>
       <div>
         <ol className={philosophyStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
               <li>
                 <Link className={philosophyStyles.link}>
-                  <p>{edge.node.frontmatter.title}</p>
-                  <p>{edge.node.frontmatter.author}</p>
-                  <p>{edge.node.frontmatter.date}</p>
-                  <img
+                  <h2>{edge.node.frontmatter.title}</h2>
+
+                  {/* <img
                     alt="philosophy"
                     className={philosophyStyles.image}
                     src={edge.node.frontmatter.image.childImageSharp.resize.src}
-                  />
+                  /> */}
                   <p>{edge.node.frontmatter.description}</p>
                 </Link>
               </li>

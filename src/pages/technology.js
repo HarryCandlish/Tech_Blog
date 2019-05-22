@@ -35,7 +35,7 @@ const Technology = () => {
   return (
     <div className={techStyles.body}>
       <Header />
-      <h1 className={techStyles.title}>Technology</h1>
+      <h1 className={techStyles.title}>TECHNOLOGY</h1>
       <div>
         <ol className={techStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
@@ -43,7 +43,7 @@ const Technology = () => {
               <li className={techStyles.post}>
                 <Link className={techStyles.link}>
                   <p>{edge.node.frontmatter.title}</p>
-                  <p>{edge.node.frontmatter.author}</p>
+
                   <p>{edge.node.frontmatter.date}</p>
                   <img
                     alt="technology"

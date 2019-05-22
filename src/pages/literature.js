@@ -45,9 +45,8 @@ const Literature = () => {
                   <h1 className={litStyles.titles}>
                     {edge.node.frontmatter.title}
                   </h1>
-                  <p>{edge.node.frontmatter.author}</p>
-                  <p>{edge.node.frontmatter.date}</p>
-
+                  <hr />
+                  <h3>{edge.node.frontmatter.author}</h3>
                   <p>{edge.node.frontmatter.description}</p>
                 </Link>
               </li>

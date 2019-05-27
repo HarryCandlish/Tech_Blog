@@ -19,13 +19,9 @@ const Literature = () => {
               date
               genre
               description
-              image {
-                childImageSharp {
-                  resize(width: 250, height: 250) {
-                    src
-                  }
-                }
-              }
+            }
+            fields {
+              slug
             }
           }
         }
@@ -41,7 +37,10 @@ const Literature = () => {
           {data.allMarkdownRemark.edges.map(edge => {
             return (
               <li className={litStyles.post}>
-                <Link className={litStyles.link}>
+                <Link
+                  to={`/literature/${edge.node.fields.slug}`}
+                  className={litStyles.link}
+                >
                   <h1 className={litStyles.titles}>
                     {edge.node.frontmatter.title}
                   </h1>

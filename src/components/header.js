@@ -22,6 +22,9 @@ const Header = () => {
                 <Link to="/literature">LITERATURE </Link>
               </li>
               <li>
+                <Link to="biodiversity">BIODIVERSITY</Link>
+              </li>
+              <li>
                 <Link to="/">HOME</Link>
               </li>
             </ul>

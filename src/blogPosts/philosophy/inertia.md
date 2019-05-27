@@ -1,5 +1,5 @@
 ---
-title: "Inertia and Consciousness"
+title: "Inertia"
 author: "Harry Candlish"
 date: "22/05/2019"
 genre: "Philosophy"

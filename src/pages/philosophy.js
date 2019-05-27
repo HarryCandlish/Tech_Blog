@@ -19,13 +19,9 @@ const Philosophy = () => {
               date
               genre
               description
-              image {
-                childImageSharp {
-                  resize(width: 250, height: 250) {
-                    src
-                  }
-                }
-              }
+            }
+            fields {
+              slug
             }
           }
         }
@@ -37,24 +33,24 @@ const Philosophy = () => {
       <Header />
       <h1 className={philosophyStyles.title}>PHILOSOPHY</h1>
       <div>
-        <ol className={philosophyStyles.posts}>
+        <ul className={philosophyStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
-              <li>
-                <Link className={philosophyStyles.link}>
-                  <h2>{edge.node.frontmatter.title}</h2>
-
-                  {/* <img
-                    alt="philosophy"
-                    className={philosophyStyles.image}
-                    src={edge.node.frontmatter.image.childImageSharp.resize.src}
-                  /> */}
+              <li className={philosophyStyles.post}>
+                <Link
+                  to={`/literature/${edge.node.fields.slug}`}
+                  className={philosophyStyles.link}
+                >
+                  <h1 className={philosophyStyles.titles}>
+                    {edge.node.frontmatter.title}
+                  </h1>
+                  <hr />
                   <p>{edge.node.frontmatter.description}</p>
                 </Link>
               </li>
             )
           })}
-        </ol>
+        </ul>
       </div>
     </div>
   )

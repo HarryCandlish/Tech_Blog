@@ -1,5 +1,5 @@
 ---
-title: "The Comical Element : How Comedy has Made its Way into Contemporary Society"
+title: "The Comical Element"
 author: "Harry Candlish"
 date: "22/05/2019"
 genre: "Philosophy"

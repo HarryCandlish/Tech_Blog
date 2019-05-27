@@ -30,6 +30,11 @@ const homePage = () => {
               <h2>LITERATURE</h2>
             </li>
           </Link>
+          <Link to="biodiversity" className={homeStyles.title}>
+            <li className={homeStyles.list}>
+              <h2>BIODIVERSITY</h2>
+            </li>
+          </Link>
         </ol>
       </div>
     </div>

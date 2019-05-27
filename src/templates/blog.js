@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-// import Header from "../components/header"
+import Header from "../components/header"
+
+import blogStyles from "./blog.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
@@ -16,12 +18,18 @@ export const query = graphql`
 
 const Blog = props => {
   return (
-    <div>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      />
-    </div>
+    <body className={blogStyles.body}>
+      <Header />
+      <div className={blogStyles.container}>
+        <h1 className={blogStyles.title}>
+          {props.data.markdownRemark.frontmatter.title}
+        </h1>
+        <div
+          className={blogStyles.content}
+          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+        />
+      </div>
+    </body>
   )
 }
 

@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Header from "../components/header"
-
 import blogStyles from "./blog.module.scss"
 
 export const query = graphql`

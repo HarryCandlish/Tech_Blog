@@ -1,10 +1,10 @@
 ---
-title: "Logical Operators"
+title: "Parameters"
 author: "Harry Candlish"
 date: "22/05/2019"
-image: "./graph.png"
+image: "./react.png"
 genre: "tech"
-description: "technology that allows an easy means of displaying data."
+description: "A front-end framework used to help easily add javascript to client-side applications."
 ---
 
 In Dostoevsky’s “Notes from the Underground”, the “Crystal Palace” symbolises the ideal that humanity is able to be constructed through strict adherence to rationalism and an means of conduct, which emphasises the fundamental wants, and motivations of humanity. These wants are listed being happiness, freedom, prosperity, and security. If humanity could define these wants and calculate how it is that an individual had to conduct themselves in order to gain such wants, then the “Crystal Palace” would be constructed upon earth.

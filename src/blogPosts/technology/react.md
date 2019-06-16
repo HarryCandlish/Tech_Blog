@@ -1,9 +1,9 @@
 ---
-title: "React"
+title: "Data-Structures"
 author: "Harry Candlish"
 date: "22/05/2019"
 image: "./react.png"
-genre: "Technology"
+genre: "tech"
 description: "A front-end framework used to help easily add javascript to client-side applications."
 ---
 

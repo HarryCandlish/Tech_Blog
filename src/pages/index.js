@@ -7,9 +7,7 @@ import homeStyles from "./index.module.scss"
 const homePage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        filter: { frontmatter: { genre: { eq: "Technology" } } }
-      ) {
+      allMarkdownRemark(filter: { frontmatter: { genre: { eq: "tech" } } }) {
         edges {
           node {
             frontmatter {
@@ -19,6 +17,7 @@ const homePage = () => {
               genre
               description
             }
+
             fields {
               slug
             }
@@ -40,7 +39,6 @@ const homePage = () => {
                   className={homeStyles.link}
                 >
                   <h2>{edge.node.frontmatter.title}</h2>
-
                   <p>{edge.node.frontmatter.description}</p>
                 </Link>
               </li>

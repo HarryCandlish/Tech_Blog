@@ -16,17 +16,15 @@ export const query = graphql`
 
 const Blog = props => {
   return (
-    <body className={blogStyles.body}>
-      <div className={blogStyles.container}>
-        <h1 className={blogStyles.title}>
-          {props.data.markdownRemark.frontmatter.title}
-        </h1>
-        <div
-          className={blogStyles.content}
-          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-        />
-      </div>
-    </body>
+    <div className={blogStyles.container}>
+      <h1 className={blogStyles.title}>
+        {props.data.markdownRemark.frontmatter.title}
+      </h1>
+      <div
+        className={blogStyles.content}
+        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+      />
+    </div>
   )
 }
 

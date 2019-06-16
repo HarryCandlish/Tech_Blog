@@ -3,7 +3,6 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import techStyles from "./technology.module.scss"
-import Header from "../components/header"
 
 const Technology = () => {
   const data = useStaticQuery(graphql`
@@ -30,7 +29,6 @@ const Technology = () => {
   `)
   return (
     <div className={techStyles.body}>
-      <Header />
       <h1 className={techStyles.title}>TECHNOLOGY</h1>
       <div>
         <ol className={techStyles.posts}>

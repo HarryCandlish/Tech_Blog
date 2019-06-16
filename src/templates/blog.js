@@ -17,7 +17,6 @@ export const query = graphql`
 const Blog = props => {
   return (
     <body className={blogStyles.body}>
-      <Header />
       <div className={blogStyles.container}>
         <h1 className={blogStyles.title}>
           {props.data.markdownRemark.frontmatter.title}
